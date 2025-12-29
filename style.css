@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6e7dff, #4e5bff);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.app {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.timer-container {
+    margin-bottom: 30px;
+}
+
+.timer {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fc0;
+    letter-spacing: 2px;
+}
+
+.word-display {
+    font-size: 2rem;
+    color: #f1f1f1;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.input-field {
+    width: 80%;
+    padding: 10px;
+    font-size: 1.25rem;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #4e5bff;
+}
+
+.start-btn {
+    padding: 12px 30px;
+    background-color: #4e5bff;
+    color: #fff;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-btn:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+.start-btn:hover:not(:disabled) {
+    background-color: #3e50d3;
+}
+
+.results {
+    font-size: 1.25rem;
+    color: #f1f1f1;
+}
+
+.results p {
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}

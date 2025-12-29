@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typsnelheidstest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="timer-container">
+            <h1>Typsnelheidstest</h1>
+            <div class="timer">
+                <p id="timer">60</p>
+            </div>
+        </div>
+        <div class="game-container">
+            <p id="word-display" class="word-display">Druk op start om te beginnen!</p>
+            <input type="text" id="input-field" class="input-field" placeholder="Typ hier het woord..." disabled />
+            <button id="start-btn" class="start-btn">Start</button>
+        </div>
+        <div id="results" class="results hidden">
+            <p id="words-count"></p>
+            <p id="characters-per-minute"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
