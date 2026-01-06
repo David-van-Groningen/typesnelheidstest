@@ -42,9 +42,6 @@ Willekeurige woorden worden opgehaald via:
 
 https://random-word-bit.vercel.app/word
 
-markdown
-Code kopiëren
-
 ## ▶️ Gebruik
 
 1. Open `index.html` in je browser
