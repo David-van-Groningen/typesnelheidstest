@@ -8,22 +8,47 @@
 </head>
 <body>
     <div class="app">
+        <button id="theme-toggle" class="theme-toggle">☀️ Light mode</button>
+
+        <h1>Typsnelheidstest</h1>
+
         <div class="timer-container">
-            <h1>Typsnelheidstest</h1>
             <div class="timer">
                 <p id="timer">60</p>
             </div>
         </div>
+
+        <select id="difficulty" class="difficulty-select">
+            <option value="easy">Makkelijk</option>
+            <option value="normal" selected>Normaal</option>
+            <option value="hard">Moeilijk</option>
+        </select>
+
         <div class="game-container">
-            <p id="word-display" class="word-display">Druk op start om te beginnen!</p>
-            <input type="text" id="input-field" class="input-field" placeholder="Typ hier het woord..." disabled />
+            <p id="word-display" class="word-display">
+                Druk op start om te beginnen!
+            </p>
+
+            <input
+                type="text"
+                id="input-field"
+                class="input-field"
+                placeholder="Typ hier het woord..."
+                disabled
+                inputmode="text"
+                autocapitalize="off"
+                autocomplete="off"
+            />
+
             <button id="start-btn" class="start-btn">Start</button>
         </div>
+
         <div id="results" class="results hidden">
             <p id="words-count"></p>
             <p id="characters-per-minute"></p>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
