@@ -4,97 +4,110 @@
     box-sizing: border-box;
 }
 
+/* THEMA VARIABELEN */
+:root {
+    --bg-gradient: linear-gradient(135deg, #6e7dff, #4e5bff);
+    --app-bg: rgba(255, 255, 255, 0.1);
+    --text-color: #ffffff;
+    --accent: #4e5bff;
+}
+
+body.light {
+    --bg-gradient: linear-gradient(135deg, #f5f7ff, #dfe4ff);
+    --app-bg: #ffffff;
+    --text-color: #333;
+}
+
+/* BASIS */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #6e7dff, #4e5bff);
-    color: #fff;
+    background: var(--bg-gradient);
+    color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
 .app {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--app-bg);
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    border-radius: 12px;
     max-width: 500px;
+    width: 100%;
     text-align: center;
-    backdrop-filter: blur(10px);
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.3rem;
+    margin-bottom: 15px;
 }
 
-.timer-container {
-    margin-bottom: 30px;
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
+/* TIMER */
 .timer {
     font-size: 3rem;
     font-weight: bold;
-    color: #fc0;
-    letter-spacing: 2px;
+    color: #ffc400;
 }
 
+/* GAME */
 .word-display {
     font-size: 2rem;
-    color: #f1f1f1;
     margin: 20px 0;
-    font-weight: bold;
+    transition: color 0.2s ease;
 }
 
-.input-field {
-    width: 80%;
-    padding: 10px;
-    font-size: 1.25rem;
-    margin: 15px 0;
+.input-field,
+.difficulty-select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
     border-radius: 8px;
     border: none;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.input-field:focus {
-    background-color: #fff;
-    color: #333;
-    border: 2px solid #4e5bff;
+    margin-bottom: 15px;
 }
 
 .start-btn {
-    padding: 12px 30px;
-    background-color: #4e5bff;
-    color: #fff;
-    font-size: 1.25rem;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
     border: none;
     border-radius: 8px;
+    background-color: var(--accent);
+    color: #fff;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .start-btn:disabled {
-    background-color: #d3d3d3;
+    background-color: #aaa;
     cursor: not-allowed;
 }
 
-.start-btn:hover:not(:disabled) {
-    background-color: #3e50d3;
-}
-
-.results {
-    font-size: 1.25rem;
-    color: #f1f1f1;
-}
-
+/* RESULTATEN */
 .results p {
     margin-top: 10px;
+    font-size: 1.1rem;
 }
 
 .hidden {
     display: none;
+}
+
+/* MOBIEL */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .word-display {
+        font-size: 1.6rem;
+    }
 }
